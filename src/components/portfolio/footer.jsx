@@ -2,17 +2,17 @@ import { Heart, Github, Linkedin, Mail } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="px-6 py-8 lg:px-8 border-t border-border">
+    <footer className="px-6 py-8 border-t lg:px-8 border-border">
       <div className="max-w-full">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <Heart className="w-5 h-5 text-primary fill-primary" />
-            <span className="font-bold text-foreground tracking-tight">HENG.</span>
+            <span className="font-bold tracking-tight text-foreground">HENG.</span>
           </a>
 
           {/* Copyright */}
-          <p className="text-sm text-muted-foreground text-center">
+          <p className="text-sm text-center text-muted-foreground">
             Designed & Built by Chhun Sivheng
           </p>
 
@@ -22,14 +22,14 @@ export function Footer() {
               href="https://github.com/ChhunSivHeng"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="transition-colors text-muted-foreground hover:text-primary"
               aria-label="GitHub Profile"
             >
               <Github className="w-5 h-5" />
             </a>
             <a
               href="mailto:chhunsivheng06@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="transition-colors text-muted-foreground hover:text-primary"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
@@ -38,7 +38,7 @@ export function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="transition-colors text-muted-foreground hover:text-primary"
               aria-label="LinkedIn Profile"
             >
               <Linkedin className="w-5 h-5" />
