@@ -7,6 +7,16 @@ const skills = [
   "Video Production",
 ]
 
+const codeLanguages = [
+  "JavaScript",
+  "Dart",
+  "C++",
+  "C#",
+  "C",
+  "Java",
+  "Python",
+]
+
 const frameworks = [
   "React JS",
   "Flutter",
@@ -43,7 +53,7 @@ export function Skills() {
       <div className="max-w-full">
         <div className="flex items-center gap-3 mb-12">
           <div className="w-1 h-8 rounded-full bg-primary" />
-          <h2 className="text-2xl font-bold text-foreground">Skills & Expertise</h2>
+          <h2 className="text-2xl font-bold text-foreground">Skills</h2>
         </div>
         
         <div className="grid gap-8 lg:grid-cols-3">
@@ -75,8 +85,23 @@ export function Skills() {
           </div>
         </div>
 
-        {/* Frameworks, Tools & Soft Skills */}
-        <div className="grid gap-8 mt-12 lg:grid-cols-3">
+        {/* Code Languages, Frameworks, Tools & Soft Skills */}
+        <div className="grid gap-8 mt-12 lg:grid-cols-2">
+          {/* Code Languages */}
+          <div>
+            <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">CODE LANGUAGES</h3>
+            <div className="flex flex-wrap gap-2">
+              {codeLanguages.map((language) => (
+                <span
+                  key={language}
+                  className="px-4 py-2 text-sm font-medium border rounded-lg text-foreground border-foreground/30"
+                >
+                  {language}
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Frameworks */}
           <div>
             <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">FRAMEWORKS</h3>

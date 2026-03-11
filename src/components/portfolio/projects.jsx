@@ -218,25 +218,15 @@ export function Projects() {
                     ))}
                   </div>
 
-                  {/* Role & Link */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-center justify-center w-8 h-8 text-xs font-bold rounded-full bg-muted text-muted-foreground">
-                        {project.role.charAt(0)}
-                      </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground">MY ROLE</p>
-                        <p className="text-sm font-medium text-foreground">{project.role}</p>
-                      </div>
+                  {/* Role */}
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center justify-center w-8 h-8 text-xs font-bold rounded-full bg-muted text-muted-foreground">
+                      {project.role.charAt(0)}
                     </div>
-
-                    <a
-                      href={project.link}
-                      className="flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-                    >
-                      View Details
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <div>
+                      <p className="text-xs text-muted-foreground">MY ROLE</p>
+                      <p className="text-sm font-medium text-foreground">{project.role}</p>
+                    </div>
                   </div>
                 </div>
               </div>
