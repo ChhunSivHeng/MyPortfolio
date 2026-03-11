@@ -61,15 +61,15 @@ export function Projects() {
     <section id="projects" className="px-6 py-16 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-12">
+        <div className="flex flex-col gap-6 mb-12 lg:flex-row lg:items-start lg:justify-between">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-1 h-12 bg-primary rounded-full" />
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+              <div className="w-1 h-12 rounded-full bg-primary" />
+              <h2 className="text-3xl font-bold lg:text-4xl text-foreground">
                 Frontend & <span className="text-primary">IT Projects</span>
               </h2>
             </div>
-            <p className="text-muted-foreground max-w-lg">
+            <p className="max-w-lg text-muted-foreground">
               A professional showcase of high-impact software development and specialized UI/UX solutions.
             </p>
           </div>
@@ -103,7 +103,7 @@ export function Projects() {
             >
               <div className={`flex flex-col lg:flex-row ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
                 {/* Image */}
-                <div className="lg:w-2/5 h-64 lg:h-auto relative overflow-hidden">
+                <div className="relative h-64 overflow-hidden lg:w-2/5 lg:h-auto">
                   <div 
                     className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
                     style={{ background: project.image }}
@@ -111,26 +111,26 @@ export function Projects() {
                 </div>
 
                 {/* Content */}
-                <div className="lg:w-3/5 p-8">
+                <div className="p-8 lg:w-3/5">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs font-medium text-primary tracking-wider">
+                    <span className="text-xs font-medium tracking-wider text-primary">
                       {project.category}
                     </span>
                     {project.status && (
                       <>
-                        <span className="w-1 h-1 bg-muted-foreground rounded-full" />
-                        <span className="text-xs font-medium text-emerald-600 tracking-wider">
+                        <span className="w-1 h-1 rounded-full bg-muted-foreground" />
+                        <span className="text-xs font-medium tracking-wider text-emerald-600">
                           {project.status}
                         </span>
                       </>
                     )}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="mb-3 text-2xl font-bold text-foreground">
                     {project.title}
                   </h3>
 
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="mb-6 leading-relaxed text-muted-foreground">
                     {project.description}
                   </p>
 
@@ -149,7 +149,7 @@ export function Projects() {
                   {/* Role & Link */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-xs font-bold text-muted-foreground">
+                      <div className="flex items-center justify-center w-8 h-8 text-xs font-bold rounded-full bg-muted text-muted-foreground">
                         {project.role.charAt(0)}
                       </div>
                       <div>

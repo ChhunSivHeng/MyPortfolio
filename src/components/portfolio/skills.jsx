@@ -1,21 +1,31 @@
-const technicalSkills = [
-  { name: "JavaScript", level: 85 },
-  { name: "Flutter", level: 75 },
-  { name: "UI/UX Design", level: 90 },
-  { name: "Figma", level: 88 },
-  { name: "HTML/CSS", level: 90 },
-  { name: "Video Editing", level: 80 },
+const skills = [
+  "Coding & Development",
+  "Graphic Design",
+  "UI/UX Design",
+  "Game Development",
+  "Motion Graphics",
+  "Video Production",
+]
+
+const frameworks = [
+  "React JS",
+  "Flutter",
 ]
 
 const tools = [
+  "Unity",
   "Figma",
   "VS Code",
   "Git",
   "Adobe After Effects",
+  "Adobe Photoshop",
   "Adobe Premiere Pro",
-  "Unity",
-  "Flutter",
   "Chrome DevTools",
+]
+
+const languages = [
+  { name: "Khmer", level: "Native" },
+  { name: "English", level: "Intermediate" },
 ]
 
 const softSkills = [
@@ -32,53 +42,59 @@ export function Skills() {
     <section id="skills" className="px-6 py-16 lg:px-8">
       <div className="max-w-full">
         <div className="flex items-center gap-3 mb-12">
-          <div className="w-1 h-8 bg-primary rounded-full" />
+          <div className="w-1 h-8 rounded-full bg-primary" />
           <h2 className="text-2xl font-bold text-foreground">Skills & Expertise</h2>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Technical Skills */}
+        <div className="grid gap-8 lg:grid-cols-3">
+          {/* Skills */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">TECHNICAL SKILLS</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {technicalSkills.map((skill) => (
-                <div key={skill.name} className="p-4 bg-card border border-border rounded-lg">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="font-medium text-foreground">{skill.name}</span>
-                    <span className="text-muted-foreground">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
+            <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">SKILLS</h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {skills.map((skill) => (
+                <div key={skill} className="p-4 border rounded-lg bg-card border-border">
+                  <span className="font-medium text-foreground">{skill}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Languages */}
+          {/* Languages - Separated */}
           <div>
-            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">LANGUAGES</h3>
+            <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">LANGUAGES</h3>
             <div className="space-y-3">
-              <div className="flex items-center justify-between p-4 bg-card border border-border rounded-lg">
-                <span className="font-medium text-foreground">Khmer</span>
-                <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Native</span>
-              </div>
-              <div className="flex items-center justify-between p-4 bg-card border border-border rounded-lg">
-                <span className="font-medium text-foreground">English</span>
-                <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded">Intermediate</span>
-              </div>
+              {languages.map((lang) => (
+                <div key={lang.name} className="flex items-center justify-between p-4 border rounded-lg bg-card border-border">
+                  <span className="font-medium text-foreground">{lang.name}</span>
+                  <span className={`px-2 py-1 text-xs font-medium rounded ${lang.level === "Native" ? "text-primary bg-primary/10" : "text-muted-foreground bg-muted"}`}>
+                    {lang.level}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Tools & Soft Skills */}
-        <div className="grid lg:grid-cols-2 gap-8 mt-12">
+        {/* Frameworks, Tools & Soft Skills */}
+        <div className="grid gap-8 mt-12 lg:grid-cols-3">
+          {/* Frameworks */}
+          <div>
+            <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">FRAMEWORKS</h3>
+            <div className="flex flex-wrap gap-2">
+              {frameworks.map((framework) => (
+                <span
+                  key={framework}
+                  className="px-4 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary"
+                >
+                  {framework}
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Tools */}
           <div>
-            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">TOOLS & TECHNOLOGIES</h3>
+            <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">TOOLS</h3>
             <div className="flex flex-wrap gap-2">
               {tools.map((tool) => (
                 <span
@@ -93,12 +109,12 @@ export function Skills() {
 
           {/* Soft Skills */}
           <div>
-            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">SOFT SKILLS</h3>
+            <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">SOFT SKILLS</h3>
             <div className="flex flex-wrap gap-2">
               {softSkills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-4 py-2 text-sm rounded-lg border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors"
+                  className="px-4 py-2 text-sm transition-colors border rounded-lg border-border text-muted-foreground hover:border-primary hover:text-primary"
                 >
                   {skill}
                 </span>

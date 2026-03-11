@@ -1,23 +1,33 @@
 "use client"
 
-const technicalSkills = [
-  { name: "JavaScript", level: 85 },
-  { name: "Flutter", level: 75 },
-  { name: "UI/UX Design", level: 90 },
-  { name: "Figma", level: 88 },
-  { name: "HTML/CSS", level: 90 },
-  { name: "Video Editing", level: 80 },
+const skills = [
+  "Coding & Development",
+  "Graphic Design",
+  "UI/UX Design",
+  "Game Development",
+  "Motion Graphics",
+  "Video Production",
+]
+
+const frameworks = [
+  "React JS",
+  "Flutter",
 ]
 
 const tools = [
+  "Unity",
   "Figma",
   "VS Code",
   "Git",
   "Adobe After Effects",
+  "Adobe Photoshop",
   "Adobe Premiere Pro",
-  "Unity",
-  "Flutter",
   "Chrome DevTools",
+]
+
+const languages = [
+  { name: "Khmer", level: "Native" },
+  { name: "English", level: "Intermediate" },
 ]
 
 const softSkills = [
@@ -39,53 +49,59 @@ export function Skills() {
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Technical Skills */}
+          {/* Skills */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">TECHNICAL SKILLS</h3>
+            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">SKILLS</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              {technicalSkills.map((skill) => (
-                <div key={skill.name} className="p-4 bg-card border border-border rounded-lg">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="font-medium text-foreground">{skill.name}</span>
-                    <span className="text-muted-foreground">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
+              {skills.map((skill) => (
+                <div key={skill} className="p-4 bg-card border border-border rounded-lg">
+                  <span className="font-medium text-foreground">{skill}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Languages */}
+          {/* Languages - Separated */}
           <div>
             <h3 className="text-sm font-medium text-primary tracking-wider mb-6">LANGUAGES</h3>
             <div className="space-y-3">
-              <div className="flex items-center justify-between p-4 bg-card border border-border rounded-lg">
-                <span className="font-medium text-foreground">Khmer</span>
-                <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">Native</span>
-              </div>
-              <div className="flex items-center justify-between p-4 bg-card border border-border rounded-lg">
-                <span className="font-medium text-foreground">English</span>
-                <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded">Intermediate</span>
-              </div>
+              {languages.map((lang) => (
+                <div key={lang.name} className="flex items-center justify-between p-4 bg-card border border-border rounded-lg">
+                  <span className="font-medium text-foreground">{lang.name}</span>
+                  <span className={`text-xs font-medium px-2 py-1 rounded ${lang.level === "Native" ? "text-primary bg-primary/10" : "text-muted-foreground bg-muted"}`}>
+                    {lang.level}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Tools & Soft Skills */}
-        <div className="grid lg:grid-cols-2 gap-8 mt-12">
+        {/* Frameworks, Tools & Soft Skills */}
+        <div className="grid lg:grid-cols-3 gap-8 mt-12">
+          {/* Frameworks */}
+          <div>
+            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">FRAMEWORKS</h3>
+            <div className="flex flex-wrap gap-2">
+              {frameworks.map((framework) => (
+                <span
+                  key={framework}
+                  className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary rounded-lg"
+                >
+                  {framework}
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Tools */}
           <div>
-            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">TOOLS & TECHNOLOGIES</h3>
+            <h3 className="text-sm font-medium text-primary tracking-wider mb-6">TOOLS</h3>
             <div className="flex flex-wrap gap-2">
               {tools.map((tool) => (
                 <span
                   key={tool}
-                  className="px-4 py-2 text-sm font-medium rounded-lg bg-muted text-foreground"
+                  className="px-4 py-2 text-sm font-medium bg-muted text-foreground rounded-lg"
                 >
                   {tool}
                 </span>

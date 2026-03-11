@@ -1,31 +1,31 @@
 const experiences = [
   {
-    period: "JAN 2026 — PRESENT",
-    title: "Frontend Developer & UX/UI Design",
-    company: "School Project: Computer Store",
-    description: "Developed frontend and implemented UX/UI designs, including user flows, wireframes, and responsive interfaces. Coded JavaScript to build interactive pages.",
-    skills: ["JavaScript", "UI/UX Design", "Responsive Design"]
+    period: "2025 — PRESENT",
+    title: "Digital Marketing",
+    company: "CTK Cabinet",
+    description: "Shoot product photos and videos for marketing and promotional use. Create visual content for cosmetic products and cabinet services. Support brand visibility through social media promotion and digital campaigns.",
+    skills: ["Photography", "Video Production", "Content Creation", "Social Media Marketing"]
   },
   {
-    period: "JULY 2025 — DEC 2025",
-    title: "Game Developer (Unity)",
-    company: "School Project: 3D Game",
-    description: "Designed and built game environments and scenes, including object placement, lighting, and player interaction. Implemented basic game logic and controls.",
-    skills: ["Unity", "Game Development", "C#"]
+    period: "APR 2024 - July 2024",
+    title: "WUL 2025 - Media Team",
+    company: "Event Coverage",
+    description: "Shoot photos and design posters for events and promotional materials. Capture high-quality images and create engaging visual designs for various occasions.",
+    skills: ["Photography", "Poster Design", "Graphic Design", "Content Creation"]
   },
   {
-    period: "APR 2025 — JULY 2025",
-    title: "UI/UX Designer",
-    company: "School Project: Domrov E-Learning",
-    description: "Designed an e-learning platform interface using Figma, focusing on usability and user-centered design. Created wireframes and prototypes.",
-    skills: ["Figma", "UI/UX Design", "Prototyping"]
+    period: "APR 2025 — PRESENT",
+    title: "Media Team Member",
+    company: "CSA - CADT Student Association",
+    description: "Work as part of the media team to design posters, banners, and digital content for student activities. Assist in event coverage, photography, and promotional media.",
+    skills: ["Graphic Design", "Event Coverage", "Photography", "Content Creation"]
   },
   {
     period: "2022 — PRESENT",
     title: "Freelance Graphic Designer",
     company: "Self-Employed",
     description: "Design graphics and motion content for clients, including posters, social media, and lyric videos. Handle projects independently.",
-    skills: ["Graphic Design", "Motion Graphics", "Video Editing"]
+    skills: ["Graphic Design", "Motion Graphics", "Video Editing", "Branding"]
   },
 ]
 
@@ -34,29 +34,29 @@ export function Experience() {
     <section id="experience" className="px-6 py-16 lg:px-8 bg-muted/30">
       <div className="max-w-full">
         <div className="flex items-center gap-3 mb-12">
-          <div className="w-1 h-8 bg-primary rounded-full" />
+          <div className="w-1 h-8 rounded-full bg-primary" />
           <h2 className="text-2xl font-bold text-foreground">Work Experience</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="group p-6 bg-card border border-border rounded-xl hover:border-primary/30 transition-colors"
+              className="p-6 transition-colors border group bg-card border-border rounded-xl hover:border-primary/30"
             >
-              <p className="text-xs text-primary font-medium tracking-wider mb-2">
+              <p className="mb-2 text-xs font-medium tracking-wider text-primary">
                 {exp.period}
               </p>
               
-              <h3 className="text-lg font-semibold text-foreground mb-1">
+              <h3 className="mb-1 text-lg font-semibold text-foreground">
                 {exp.title}
               </h3>
               
-              <p className="text-sm text-muted-foreground mb-3">
+              <p className="mb-3 text-sm text-muted-foreground">
                 {exp.company}
               </p>
               
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
                 {exp.description}
               </p>
               

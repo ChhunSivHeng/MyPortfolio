@@ -23,7 +23,9 @@ export function Contact() {
               Feel free to reach out through any of the channels below.
             </p>
             <Link
-              href="mailto:chhunsivheng06@gmail.com"
+              href="https://t.me/ChhunSivHeng"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               Send Message

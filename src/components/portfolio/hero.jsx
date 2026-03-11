@@ -104,22 +104,6 @@ export function Hero() {
               I believe understanding design foundations leads to more thoughtful development.
             </p>
           </div>
-
-          {/* Quick Stats */}
-          <div className="grid max-w-md grid-cols-3 gap-4 pt-8">
-            <div className="p-4 text-center rounded-lg bg-muted">
-              <p className="text-2xl font-bold text-foreground">3+</p>
-              <p className="mt-1 text-xs text-muted-foreground">Years Experience</p>
-            </div>
-            <div className="p-4 text-center rounded-lg bg-muted">
-              <p className="text-2xl font-bold text-foreground">10+</p>
-              <p className="mt-1 text-xs text-muted-foreground">Projects Done</p>
-            </div>
-            <div className="p-4 text-center rounded-lg bg-muted">
-              <p className="text-2xl font-bold text-foreground">5+</p>
-              <p className="mt-1 text-xs text-muted-foreground">Happy Clients</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
