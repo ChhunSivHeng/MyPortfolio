@@ -50,21 +50,21 @@ const softSkills = [
 
 export function Skills() {
   return (
-    <section id="skills" className="px-6 py-16 lg:px-8">
+    <section id="skills" className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
       <div className="max-w-full">
-        <div className="flex items-center gap-3 mb-12">
+        <div className="flex items-center gap-3 mb-8 sm:mb-12">
           <div className="w-1 h-8 rounded-full bg-primary" />
-          <h2 className="text-2xl font-bold text-foreground">Skills</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground">Skills</h2>
         </div>
         
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-3">
           {/* Skills */}
           <div className="lg:col-span-2">
-            <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">SKILLS</h3>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <h3 className="mb-4 sm:mb-6 text-xs sm:text-sm font-medium tracking-wider text-primary">SKILLS</h3>
+            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
               {skills.map((skill) => (
-                <div key={skill.name} className="p-4 border rounded-lg bg-card border-border">
-                  <span className="font-medium text-foreground">{skill.name}</span>
+                <div key={skill.name} className="p-3 sm:p-4 border rounded-lg bg-card border-border">
+                  <span className="font-medium text-sm sm:text-base text-foreground">{skill.name}</span>
                 </div>
               ))}
             </div>

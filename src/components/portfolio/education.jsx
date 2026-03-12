@@ -30,9 +30,9 @@ export function Education() {
           {education.map((edu, index) => (
             <div
               key={index}
-              className="group p-6 bg-card border border-border rounded-xl hover:border-primary/30 transition-colors"
+              className="group p-6 bg-card border border-border rounded-xl hover:border-primary/30 transition-colors text-center"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col items-center gap-4">
                 <div className="p-3 rounded-lg bg-primary/10 text-primary">
                   <edu.icon className="w-6 h-6" />
                 </div>

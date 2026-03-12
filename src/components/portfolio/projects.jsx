@@ -131,18 +131,18 @@ export function Projects() {
     : projects.filter(p => p.type === activeCategory)
 
   return (
-    <section id="projects" className="px-6 py-16 lg:px-8">
+    <section id="projects" className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
       <div className="max-w-full">
         {/* Section Header */}
-        <div className="flex flex-col gap-6 mb-12 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex flex-col gap-4 sm:gap-6 mb-8 sm:mb-12 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-1 h-12 rounded-full bg-primary" />
-              <h2 className="text-3xl font-bold lg:text-4xl text-foreground">
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <div className="w-1 h-10 sm:h-12 rounded-full bg-primary" />
+              <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl text-foreground">
                 My <span className="text-primary">Projects</span>
               </h2>
             </div>
-            <p className="max-w-lg text-left text-muted-foreground">
+            <p className="max-w-lg text-sm sm:text-base text-left text-muted-foreground">
               A professional showcase of high-impact software development and specialized UI/UX solutions.
             </p>
           </div>

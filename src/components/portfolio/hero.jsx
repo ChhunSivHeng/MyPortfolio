@@ -3,9 +3,9 @@ import profilePicture from "../../assets/MyPictureProfile/Profile.png"
 
 export function Hero() {
   return (
-    <section id="about" className="px-6 py-20 lg:px-8">
+    <section id="about" className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="max-w-full">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left Column - Profile Picture */}
           <div className="flex flex-col items-center justify-start">
             <div className="relative">
@@ -13,7 +13,7 @@ export function Hero() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 blur-2xl"></div>
               
               {/* Profile Picture Container */}
-              <div className="relative w-80 h-96 lg:w-96 lg:h-[28rem]">
+              <div className="relative w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[28rem]">
                 <img 
                   src={profilePicture} 
                   alt="Chhun Sivheng" 
@@ -24,15 +24,15 @@ export function Hero() {
           </div>
 
           {/* Right Column - Introduction */}
-          <div className="flex flex-col justify-start space-y-6">
+          <div className="flex flex-col justify-start space-y-4 sm:space-y-6">
             <div>
-              <p className="mb-2 text-sm font-medium tracking-wider text-left text-primary">
-                HELLO, I&apos;M
+              <p className="mb-2 text-xs sm:text-sm font-medium tracking-wider text-left text-primary">
+                HELLO, I'M
               </p>
-              <h1 className="text-4xl font-bold leading-tight text-left lg:text-5xl text-foreground">
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-left lg:text-5xl text-foreground">
                 Chhun Sivheng
               </h1>
-              <p className="mt-3 text-xl text-left text-muted-foreground">
+              <p className="mt-2 sm:mt-3 text-base sm:text-lg text-left text-muted-foreground">
                 Frontend Developer & UI/UX Designer
               </p>
             </div>
