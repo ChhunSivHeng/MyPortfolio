@@ -1,36 +1,57 @@
+import jsLogo from "../../../assets/LanguagesLogo/JavaScript-Logo.png"
+import cppLogo from "../../../assets/LanguagesLogo/CPP.png"
+import cLogo from "../../../assets/LanguagesLogo/C.png"
+import javaLogo from "../../../assets/LanguagesLogo/JAVA.png"
+import pythonLogo from "../../../assets/LanguagesLogo/Python.png"
+import htmlLogo from "../../../assets/LanguagesLogo/HTML.png"
+import cssLogo from "../../../assets/LanguagesLogo/CSS.png"
+import reactLogo from "../../../assets/FreameworkLogo/FRAMEWORKS REACT JS.webp"
+import flutterLogo from "../../../assets/FreameworkLogo/FLUTTER.png"
+import unityLogo from "../../../assets/Tools Logo/UNITY.png"
+import figmaLogo from "../../../assets/Tools Logo/Figma-logo.svg"
+import vscodeLogo from "../../../assets/Tools Logo/VS CODE.png"
+import gitLogo from "../../../assets/Tools Logo/github.png"
+import aefsLogo from "../../../assets/Tools Logo/AFTER EFFECTS LOGO.png"
+import psLogo from "../../../assets/Tools Logo/PHOTOSHOP LOGO.webp"
+import blenderLogo from "../../../assets/Tools Logo/BLENDER LOGO.png"
+import dbeaverLogo from "../../../assets/Tools Logo/DBeaver.png"
+import xammpLogo from "../../../assets/Tools Logo/Xammp.png"
+
 const skills = [
-  "Coding & Development",
-  "Graphic Design",
-  "UI/UX Design",
-  "Game Development",
-  "Motion Graphics",
-  "Video Production",
+  { name: "Coding & Development" },
+  { name: "Graphic Design" },
+  { name: "UI/UX Design" },
+  { name: "Game Development" },
+  { name: "Motion Graphics" },
+  { name: "Video Production" },
 ]
 
 const codeLanguages = [
-  "JavaScript",
-  "Dart",
-  "C++",
-  "C#",
-  "C",
-  "Java",
-  "Python",
+  { name: "JavaScript", logo: jsLogo },
+  { name: "C++", logo: cppLogo },
+  { name: "C", logo: cLogo },
+  { name: "Java", logo: javaLogo },
+  { name: "Python", logo: pythonLogo },
+  { name: "HTML", logo: htmlLogo },
+  { name: "CSS", logo: cssLogo },
 ]
 
 const frameworks = [
-  "React JS",
-  "Flutter",
+  { name: "React JS", logo: reactLogo },
+  { name: "Flutter", logo: flutterLogo },
 ]
 
 const tools = [
-  "Unity",
-  "Figma",
-  "VS Code",
-  "Git",
-  "Adobe After Effects",
-  "Adobe Photoshop",
-  "Adobe Premiere Pro",
-  "Chrome DevTools",
+  { name: "Unity", logo: unityLogo },
+  { name: "Figma", logo: figmaLogo },
+  { name: "VS Code", logo: vscodeLogo },
+  { name: "Git", logo: gitLogo },
+  { name: "Adobe After Effects", logo: aefsLogo },
+  { name: "Adobe Photoshop", logo: psLogo },
+  { name: "Adobe Premiere Pro", logo: aefsLogo },
+  { name: "Blender", logo: blenderLogo },
+  { name: "DBeaver", logo: dbeaverLogo },
+  { name: "Xampp", logo: xammpLogo },
 ]
 
 const languages = [
@@ -39,12 +60,12 @@ const languages = [
 ]
 
 const softSkills = [
-  "Design Thinking",
-  "Adaptability",
-  "Time Management",
-  "Effective Communication",
-  "Problem Solving",
-  "Team Collaboration",
+  { name: "Design Thinking" },
+  { name: "Adaptability" },
+  { name: "Time Management" },
+  { name: "Effective Communication" },
+  { name: "Problem Solving" },
+  { name: "Team Collaboration" },
 ]
 
 export function Skills() {
@@ -62,8 +83,8 @@ export function Skills() {
             <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">SKILLS</h3>
             <div className="grid gap-4 sm:grid-cols-2">
               {skills.map((skill) => (
-                <div key={skill} className="p-4 border rounded-lg bg-card border-border">
-                  <span className="font-medium text-foreground">{skill}</span>
+                <div key={skill.name} className="p-4 border rounded-lg bg-card border-border">
+                  <span className="font-medium text-foreground">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -90,14 +111,15 @@ export function Skills() {
           {/* Code Languages */}
           <div>
             <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">CODE LANGUAGES</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {codeLanguages.map((language) => (
-                <span
-                  key={language}
-                  className="px-4 py-2 text-sm font-medium border rounded-lg text-foreground border-foreground/30"
+                <div
+                  key={language.name}
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors border rounded-lg text-foreground border-foreground/30 hover:border-primary"
                 >
-                  {language}
-                </span>
+                  <img src={language.logo} alt={language.name} className="object-contain w-5 h-5" />
+                  {language.name}
+                </div>
               ))}
             </div>
           </div>
@@ -105,14 +127,15 @@ export function Skills() {
           {/* Frameworks */}
           <div>
             <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">FRAMEWORKS</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {frameworks.map((framework) => (
-                <span
-                  key={framework}
-                  className="px-4 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary"
+                <div
+                  key={framework.name}
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-lg bg-primary/10 text-primary hover:bg-primary/20"
                 >
-                  {framework}
-                </span>
+                  <img src={framework.logo} alt={framework.name} className="object-contain w-5 h-5" />
+                  {framework.name}
+                </div>
               ))}
             </div>
           </div>
@@ -120,14 +143,15 @@ export function Skills() {
           {/* Tools */}
           <div>
             <h3 className="mb-6 text-sm font-medium tracking-wider text-primary">TOOLS</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="px-4 py-2 text-sm font-medium rounded-lg bg-muted text-foreground"
+                <div
+                  key={tool.name}
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-lg bg-muted text-foreground hover:bg-muted/80"
                 >
-                  {tool}
-                </span>
+                  <img src={tool.logo} alt={tool.name} className="object-contain w-5 h-5" />
+                  {tool.name}
+                </div>
               ))}
             </div>
           </div>
@@ -138,10 +162,10 @@ export function Skills() {
             <div className="flex flex-wrap gap-2">
               {softSkills.map((skill) => (
                 <span
-                  key={skill}
+                  key={skill.name}
                   className="px-4 py-2 text-sm transition-colors border rounded-lg border-border text-muted-foreground hover:border-primary hover:text-primary"
                 >
-                  {skill}
+                  {skill.name}
                 </span>
               ))}
             </div>
