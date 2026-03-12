@@ -39,6 +39,7 @@ const projects = [
   },
   {
     category: "FIGMA DESIGN",
+    status: "COMPLETED",
     title: "Computer Store E-commerce - UI Design",
     description: "Professional e-commerce platform design for computer hardware retail. Features product catalog, advanced filtering, shopping cart experience, and secure checkout flow. Design focused on conversion optimization and user trust.",
     details: "Created high-fidelity mockups with attention to product presentation, pricing clarity, and seamless user journey from browsing to purchase completion.",
@@ -50,7 +51,7 @@ const projects = [
   },
   {
     category: "FIGMA DESIGN",
-    status: "ACTIVE",
+    status: "COMPLETED",
     title: "Game Design Home Page - Interactive UI",
     description: "Creative home page design for a gaming platform featuring hero sections, game showcase, player stats, and social features. Designed with gaming aesthetics and engaging visual hierarchy to attract and retain players.",
     details: "Implemented dynamic animations, gradient designs, and gaming-focused UI components that enhance user engagement and encourage exploration.",
@@ -62,18 +63,19 @@ const projects = [
   },
   {
     category: "FIGMA DESIGN",
+        status: "COMPLETED",
     title: "E-learning Theme System - Design System",
     description: "Comprehensive design system and theming framework for an e-learning platform. Includes color themes, component library, typography scales, spacing guidelines, and accessibility specifications for consistent UI implementation.",
     details: "Created modular, scalable design tokens that can be easily adapted for different learning contexts and user preferences, supporting light and dark modes.",
     skills: ["Figma", "Design Systems", "Tokens", "Component Library", "Documentation"],
-    role: "Design Systems Lead",
+    role: "UX/UI deisgner",
     image: elearningTheme,
     type: "Figma Design",
     link: "#"
   },
   {
     category: "WEB DESIGN",
-    status: "ACTIVE",
+    status: "COMPLETED",
     title: "Computer Store Frontend - React Implementation",
     description: "Fully responsive e-commerce frontend built with React.js and Tailwind CSS. Features dynamic product filtering, shopping cart functionality, responsive grid layouts, and smooth animations. Demonstrates modern React patterns and component architecture.",
     details: "Implemented reusable React components, state management, and API integration. The project showcases pixel-perfect design implementation and performance optimization with lazy loading and code splitting.",
@@ -85,12 +87,12 @@ const projects = [
   },
   {
     category: "WEB DESIGN",
-    status: "COMPLETED",
+    status: "Working",
     title: "Domrov Automation Platform - React Web App",
     description: "Full-stack web application for business automation and workflow management. Built with React for dynamic UI, featuring dashboard analytics, task management, real-time notifications, and user authentication. Clean architecture with modular components.",
     details: "Integrated multiple features including data visualization, form handling, API communication, and state management. The platform demonstrates advanced React concepts and best practices for scalable applications.",
     skills: ["React.js", "Tailwind CSS", "API Integration", "Data Visualization", "Authentication"],
-    role: "Full Stack Developer",
+    role: "Front-End Developer",
     image: domrovReact,
     type: "Web Design",
     link: "#"
@@ -223,7 +225,7 @@ export function Projects() {
                     <div className="flex items-center justify-center w-8 h-8 text-xs font-bold rounded-full bg-muted text-muted-foreground">
                       {project.role.charAt(0)}
                     </div>
-                    <div>
+                    <div className="text-left">
                       <p className="text-xs text-muted-foreground">MY ROLE</p>
                       <p className="text-sm font-medium text-foreground">{project.role}</p>
                     </div>
