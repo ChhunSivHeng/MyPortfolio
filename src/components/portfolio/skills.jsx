@@ -7,15 +7,6 @@ import htmlLogo from "../../../assets/LanguagesLogo/HTML.png"
 import cssLogo from "../../../assets/LanguagesLogo/CSS.png"
 import reactLogo from "../../../assets/FreameworkLogo/FRAMEWORKS REACT JS.webp"
 import flutterLogo from "../../../assets/FreameworkLogo/FLUTTER.png"
-import unityLogo from "../../../assets/Tools Logo/UNITY.png"
-import figmaLogo from "../../../assets/Tools Logo/Figma-logo.svg"
-import vscodeLogo from "../../../assets/Tools Logo/VS CODE.png"
-import gitLogo from "../../../assets/Tools Logo/github.png"
-import aefsLogo from "../../../assets/Tools Logo/AFTER EFFECTS LOGO.png"
-import psLogo from "../../../assets/Tools Logo/PHOTOSHOP LOGO.webp"
-import blenderLogo from "../../../assets/Tools Logo/BLENDER LOGO.png"
-import dbeaverLogo from "../../../assets/Tools Logo/DBeaver.png"
-import xammpLogo from "../../../assets/Tools Logo/Xammp.png"
 
 const skills = [
   { name: "Coding & Development" },
@@ -41,18 +32,7 @@ const frameworks = [
   { name: "Flutter", logo: flutterLogo },
 ]
 
-const tools = [
-  { name: "Unity", logo: unityLogo },
-  { name: "Figma", logo: figmaLogo },
-  { name: "VS Code", logo: vscodeLogo },
-  { name: "Git", logo: gitLogo },
-  { name: "Adobe After Effects", logo: aefsLogo },
-  { name: "Adobe Photoshop", logo: psLogo },
-  { name: "Adobe Premiere Pro", logo: aefsLogo },
-  { name: "Blender", logo: blenderLogo },
-  { name: "DBeaver", logo: dbeaverLogo },
-  { name: "Xampp", logo: xammpLogo },
-]
+const tools = []
 
 const languages = [
   { name: "Khmer", level: "Native" },
